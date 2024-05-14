@@ -1,0 +1,255 @@
+.contact-us {
+    position: relative;
+  }
+  
+  .contact-us img {
+    object-fit: cover;
+    width: 100%;
+    height: 90vh;
+  }
+  
+  .contact-us-text {
+    margin-left: 12%;
+    transform: translateY(-150%);
+    text-align: left;
+    color: #ffffff;
+    z-index: 1;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.151);
+  }
+  
+  .contact-us-text h1 {
+    font-weight: bold;
+    font-size: 50px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-us-text p {
+    font-weight:400;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .contact h1{
+    margin-left: 6%;
+    margin-top: -10%;
+    margin-bottom: 5%;
+  }
+  
+.contact-sec{
+    margin-top: -50px;
+    position: relative;
+    display: flex;
+    gap: 40px;
+    margin-left: 30px;
+}
+
+.con-dir{
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 30px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.cont-types{
+   display: flex;
+   border: 1px solid black;
+   border-radius: 30px; 
+   margin-top: 50px;
+   margin-right: 50px;
+   text-align: center;
+   padding: 20px;
+}
+
+.contact-name{
+    float: left;
+    width: 200px;
+    height: 40px;
+}
+.contact-mail{
+    width: 200px;
+    height: 40px;
+}
+.contact-number{
+    width: 200px;
+    height: 40px;
+
+}
+.contact-text{
+    width: 400px;
+    height: 300px;
+}
+.all-img{
+    width: 100px;
+    height: 100px;
+}
+.table-contact{
+    width: 100%;
+    margin-top: 10px;
+}
+.second-head{
+    margin-top: 15px;
+    margin-left: 30px;
+}
+.test-margin{
+
+    margin-right: 1000px;
+}
+.img-advise{
+
+    width: 70px;
+    height: 70px;
+}
+.adviser-head{
+
+    text-align: center;
+    margin-top: 25px;
+}
+.type-1{
+    padding: 30px;
+    float: left;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+.type-2{
+
+    float: right;
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-right: 50px;
+}
+
+.branch-locator{
+
+    margin-top: 20px;
+}
+
+
+
+.contact-button {
+  appearance: none;
+  background-color : #2ea44f;
+  border : 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.contact-button:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.contact-button:hover {
+  background-color: #2c974b;
+}
+
+.contact-button:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.contact-button:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.contact-button:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+.text-space{
+
+    margin-top: 20px;
+}
+.contact-mail{
+
+    margin-left: 10px;
+}
+
+/*-------------------------- card -----------------------------*/
+
+.advisory-team {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .team-heading {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .team-description {
+    font-size: 16px;
+    color: #6e6e6e;
+    margin-bottom: 30px;
+  }
+  
+  .advisor-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .advisor-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+  
+  .advisor-card {
+    display: flex;
+    background-color: #d9f3dd;
+    padding: 20px;
+    margin: 10px;
+    text-align: left;
+    width: 400px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+
+  .advisor-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin-right: 30px;
+    margin-left: 10px;
+  }
+  
+  .advisor-details {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .advisor-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .advisor-info {
+    font-size: 15px;
+    color: #777;
+    margin-bottom: 5px;
+  }
+  

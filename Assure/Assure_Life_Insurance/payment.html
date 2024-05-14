@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/header2.css">
+        <link rel="stylesheet" type="text/css" href="css/footer2.css">
+        <link rel="stylesheet" href="css/payment.css">
+        <title>Payment</title>
+
+    </head>
+    <body>
+        <!-- -----------------------------------------------Header Start------------------------------------------------------------ -->
+        <script src="js/header.js" onload="includeHeader();includeFooter(2)"></script>
+        <section class="header" id="header"></section>
+        <!-- -----------------------------------------------Header end------------------------------------------------------------ -->
+
+        <!-- -----------------------------------------------Body start------------------------------------------------------------ -->
+
+    <session class="page-body">
+        <div class="container">
+            <form action="php/payment.php" method="POST" enctype="multipart/form-data">
+                <div class="left-side">
+                    <br><h2>Card Payment</h2><br>
+                    <hr style="width:92%; margin-left:4%; margin-right:4%; height:2px; background-color: black;">
+                    <img src="IMG/visa.jpg" style="width:400px ; margin-left:165px;"><br>
+
+                    <label class="amountLabel" style="margin-right: 5%;"> Policy ID:</label>
+                    <input type="number" class="amount" name="pid1"><br><br>
+
+                    <label class="amountLabel">Amount(Rs):</label>
+                    <input type="number" class="amount" name="amount1"><br>
+
+                    <br><label class="cardNameL">Name on card</label><br>
+                    <input type="text" class="cardName"><br><br>
+                    <label class="cardNumberL">Card number</label><br>
+                    <input type="number" class="cardNumber"><br><br>
+                    <label class="expiryL">Expiry</label>
+                    <label class="cvvL">CVV</label><br>
+                    <input type="date" class="expiry" placeholder="MM/YY">
+                    <input type="number" class="cvv" maxlength="3"oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                    <button type="submit" name="proceed" class="proceed">Proceed</button>
+                </div>
+                <div class="line"></div>
+                <div class="right-side">
+                    <br><h2>Bank Slip Payment</h2><br>
+                    <hr style="width:92%; margin-left:4%; margin-right:4%; height:2px; background-color: black;">
+                    <h3>Bank Slip Upload</h3><br>
+
+                    <label class="amountLabel" style="margin-right: 5%;"> Policy ID:</label>
+                    <input type="number" class="amount2" name="pid2"><br><br>
+
+                    <label class="amountLabel">Amount(Rs):</label>
+                    <input type="number" class="amount2" name="amount2"><br>
+
+                    <div class="drop">
+                        <input type="file" name="file" class="select"></input>
+                        <h5>or</h5><br>
+                        <h4>Drag & drop to upload</h4>
+                    </div><br>
+                    <p class="limitL">FILE SIZE LIMIT:</p>
+                    <p class="supportL">SUPPORTED FILES:</p>
+                    <p class="mb">50MB</p>
+                    <p class="pdf">PDF,TIFF</p>
+                    <button type="submit" name="slipSubmit" class="slipSubmit">Submit</button>
+
+                </div>
+            </form>
+        </div>
+    </session>
+
+    <!-- -----------------------------------------------Body end------------------------------------------------------------ -->
+
+    <!-- ----------------------------------------------------------Footer Start----------------------------------- -->
+    <footer id="footer"></footer>
+    <!-- ----------------------------------------------------------Footer end----------------------------------- -->
+    <script src="js/payment.js" ></script>
+</body>
+</html>

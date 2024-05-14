@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/header2.css">
+        <link rel="stylesheet" type="text/css" href="css/footer2.css">
+        <link rel="stylesheet" type="text/css" href="css/employeeProfile.css">
+        <title>Profile</title>
+    </head>
+    <body onload="checkEmployee();">
+        <!-- -----------------------------------------------Header Start------------------------------------------------------------ -->
+        <script src="js/header.js" onload="includeHeader();includeFooter(2);"></script>
+        <section class="header" id="header"></section>
+        <!-- ---------------------------------------------------------Header end----------------------------------------- -->
+
+        <!-- ---------------------------------------------------------Button Set Start----------------------------------- -->
+        <div class="btn-set">
+            <input type="button" value="View Profile" class="pro-btn" id="btn1" onclick="view(1);">
+            <input type="button" value="Manage Customer" class="pro-btn" id="btn2" onclick="view(2);">
+            <input type="button" value="New Customer" class="pro-btn" id="btn3" onclick="view(3);">
+            <input type="button" value="Approve Claim" class="pro-btn" id="btn4" onclick="view(4);">
+            <!--<input type="button" value="Give Claim" class="pro-btn" id="btn5" onclick="view(5);">-->
+            <input type="button" value="Enquiries" class="pro-btn" id="btn7" onclick="view(7);">
+            <input type="button" value="Manage Employee" class="pro-btn" id="btn6" onclick="view(6);">
+            <input type="button" value="Newsfeed" class="pro-btn" id="btn8" onclick="view(8);">
+            <input type="button" value="Testimonials" class="pro-btn" id="btn9" onclick="view(9);">
+        </div>
+        <!-- ----------------------------------------------------------Button Set end----------------------------------- -->
+
+        <!-- ----------------------------------------------------------View Info Section Start----------------------------------- -->
+        <div class="proDivCommon" id="view-info">
+            <form class="form" name="editEmp" enctype="multipart/form-data" method="POST" action="php/employeeProfile/editEmployee.php">
+
+                <div class="view-left">
+                    <label>Full Name </label>
+                    <input type="text" class="view-text unUsable" name="name" id="name" readonly>
+
+                    <label>NIC </label>
+                    <input type="text" class="view-text unUsable" name="nic" id="nic" readonly>
+
+                    <label>Gender </label>
+                    <input type="text" class="view-text unUsable" name="gender" id="gender" readonly>
+
+                    <label>Date Of Birth </label>
+                    <input type="text" class="view-text unUsable" name="dob" id="dob" readonly>
+
+                    <label>Marital Status </label>
+                    <input type="text" class="view-text" name="ms" id="ms">
+
+                    <label>Address </label>
+                    <input type="text" class="view-text" name="address" id="address">
+
+                    <label>Mobile </label>
+                    <input type="text" class="view-text" name="mobile" id="mobile">
+
+                    <label>Email </label>
+                    <input type="email" class="view-text" name="email" id="email">
+
+                    <input type="submit" value="Edit" name="editEmp" class="sub-btn" onclick="return validateEdit();">
+                </div>
+
+                <div class="view-right">
+                    <label class="img-label">
+                        <img class="img-tag" id="dp">
+                    </label>
+                    <input type="file" class="img-select" name="empImg" id="img">
+                </div>
+            </form>
+        </div>
+        <!-- ----------------------------------------------------------View Info Section end----------------------------------- -->
+
+        <!-- ----------------------------------------------------------Manage Customer Section Start----------------------------------- -->
+
+        <div class="proDivCommon" id="manage-customer" hidden>
+
+            <div class="outer-search">
+                <div class="inner-search">
+                    <label class="label-search-main">Search</label>
+                    <input type="radio" name="cus-filter" class="radio-search-customer" id="customer-sort1" value="pid" checked><label class="label-search">Policy Holder ID</label>
+                    <input type="radio" name="cus-filter" class="radio-search-customer" id="customer-sort2" value="nic"><label class="label-search">NIC</label>
+                    <input type="radio" name="cus-filter" class="radio-search-customer" id="customer-sort3" value="policy"><label class="label-search">Policy</label><br>
+                    <input type="text" class="view-text search-text" id="customer-search">
+                </div>
+            </div>
+
+            <div class="tbl-limiter">
+                <table class="table-customer" id="table-cust">
+                    <thead>
+                    <td class="tbl-id">PHID</td>
+                    <td style="width: 20%;">Name</td>
+                    <td>NIC</td>
+                    <td>DOB</td>
+                    <td>Gender</td>
+                    <td>Mobile</td>
+                    <td>Email</td>
+                    <td>Policies</td>
+                    </thead>
+                    <tbody id="customer-table"></tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <!-- ----------------------------------------------------------Manage Customer Section end----------------------------------- -->
+
+        <!-- ----------------------------------------------------------New Customer Section Start----------------------------------- -->
+
+        <div class="proDivCommon" id="new-customer" hidden>
+
+            
+
+        </div>
+
+        <!-- ----------------------------------------------------------New Customer Section end----------------------------------- -->
+
+        <!-- ----------------------------------------------------------Approve Claim Section Start----------------------------------- -->
+
+        <div class="proDivCommon" id="approve-claim" hidden>
+
+            
+
+        </div>
+
+        <!-- ----------------------------------------------------------Approve Claim Section end----------------------------------- -->
+
+        <!-- ----------------------------------------------------------Give Claim Section Start----------------------------------- -->
+
+        <div class="proDivCommon" id="give-claim" hidden>
+
+
+
+        </div>
+
+        <!-- ----------------------------------------------------------Give Claim Section end----------------------------------- -->
+
+        <!-- ----------------------------------------------------------Manage Employee Section Start----------------------------------- -->
+
+        <div class="proDivCommon" id="manage-employee" hidden>
+
+            <div class="outer-search">
+                <div class="inner-search">
+                    <label class="label-search-main">Search</label>
+                    <input type="radio" name="emp-filter" class="radio-search-employee" id="employee-sort1" value="eid" checked><label class="label-search">Employee ID</label>
+                    <input type="radio" name="emp-filter" class="radio-search-employee" id="employee-sort2" value="nic"><label class="label-search">NIC</label>
+                    <input type="radio" name="emp-filter" class="radio-search-employee" id="employee-sort3" value="occupation"><label class="label-search">Occupation</label><br>
+                    <input type="text" class="view-text search-text" id="employee-search">
+                </div>
+            </div>
+
+            <div>
+                <table class="emp-table-custom">
+                    <thead>
+                    <td class="tbl-id">EmpID</td>
+                    <td>Name</td>
+                    <td>NIC</td>
+                    <td>DOB</td>
+                    <td>Gender</td>
+                    <td>Mobile</td>
+                    <td>Email</td>
+                    <td>Occupation</td>
+                    </thead>
+                    <tbody id="employee-table">
+
+                    </tbody>
+
+                </table>
+            </div>
+
+        </div>
+
+        <!-- ----------------------------------------------------------Manage Employee Section end----------------------------------- -->
+
+        <!-- ----------------------------------------------------------Enquiries Section Start----------------------------------- -->
+
+        <div class="proDivCommon" id="enquiries" hidden>
+
+            <div class="view-left enquiry-left">
+                <input type="radio" name="enq-filter" class="radio-search-enquiry radios" value="all" onclick="enquirySort(1);" checked><label class="label-search">All</label>
+                <input type="radio" name="enq-filter" class="radio-search-enquiry" value="read" onclick="enquirySort(2);"><label class="label-search">Read</label>
+                <input type="radio" name="enq-filter" class="radio-search-enquiry" value="unread" onclick="enquirySort(3);"><label class="label-search">Un-read</label><br>
+                <table class="table-enq">
+                    <thead>
+                    <td class="tbl-id">EID</td>
+                    <td>Enquiry</td>
+                    </thead>
+                    <tbody id="enquiry-table">
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="view-right">
+                <form class="form" method="POST" onsubmit="return replyEnquiry();">
+
+                    <label>Enquiry ID </label>
+                    <input type="text" class="view-text" id="enquiry-id" name="enquiry-id" disabled>
+
+                    <label>Enquiry </label><br>
+                    <textarea class="textarea" id="enquiry-text" name="enquiry-text" disabled></textarea>
+                    <br>
+
+                    <label>Reply </label><br>
+                    <textarea class="textarea" id="reply-text" name="reply-text"></textarea>
+                    <br>
+
+                    <input type="submit" value="Send Reply" class="sub-btn">
+
+                </form>
+            </div>
+        </div>
+
+        <!-- ----------------------------------------------------------Enquiries Section end----------------------------------- -->
+
+        <!-- ----------------------------------------------------------News Feed Section Start----------------------------------- -->
+
+        <div class="proDivCommon" id="news-feed" hidden>
+
+            <div class="view-left news-left">
+                <form method="POST" name="addNews" enctype="multipart/form-data" action="php/employeeProfile/manageNewsFeed.php">
+                    <label class="news-label">
+                        <img class="news-tag" id="new-news-view">
+                    </label>
+                    <input type="file" class="img-select news-select" name="newsImg" id="new-news" accept="image/*" onchange="createNews();">
+                    <input type="submit" value="Add News Feed" name="addNews" class="sub-btn" onclick="return validateNewsfeed();">
+                </form>
+            </div>
+
+            <div class="view-right news-right" id="view-news-feed">
+                
+            </div>
+        </div>
+
+        <!-- ----------------------------------------------------------News Feed Section end----------------------------------- -->
+
+        <!-- ----------------------------------------------------------Testimonials Section Start----------------------------------- -->
+
+        <div class="proDivCommon" id="testimonials" hidden>
+
+            <div class="testimonial-left">
+                <table class="table-testi">
+                    <thead>
+                    <td class="tbl-id">PHID</td>
+                    <td>Feedback</td>
+                    </thead>
+                    <tbody id="testimonial-table">
+                        
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="testimonial-middle">
+                
+                <label>FeedBack ID </label>
+                <input type="text" class="view-text fb-text fb-resize" id="feedback-fid" disabled>
+                
+                <label>Policy Holder ID </label>
+                <input type="text" class="view-text fb-text fb-resize" id="feedback-pid" disabled>
+
+                <label>Feedback </label><br>
+                <textarea class="textarea fb-resize" id="feedback-text" disabled></textarea>
+
+                <input type="button" value="Add Testimonial" class="sub-btn" onclick="addTestimonial();">
+            </div>
+
+            <div class="testimonial-right" id="active-testimonials">
+            </div>
+
+        </div>
+
+        <!-- ----------------------------------------------------------Testimonials Section end----------------------------------- -->
+
+        <!-- ----------------------------------------------------------Footer Start----------------------------------- -->
+        <footer class="proFooter-custom" id="footer"></footer>
+        <!-- ----------------------------------------------------------Footer end----------------------------------- -->  
+        <script src="js/employeeProfile.js"></script>
+    </body>
+</html>

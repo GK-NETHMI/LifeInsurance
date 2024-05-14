@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/header2.css">
+        <link rel="stylesheet" type="text/css" href="css/footer2.css">
+        <link rel="stylesheet" href="css/signUp.css">
+        <title>Sign up</title>
+    </head>
+    <body>
+        <!-- -----------------------------------------------Header Start------------------------------------------------------------ -->
+        <script src="js/header.js" onload="includeHeader();includeFooter(2);"></script>
+        <section class="header" id="header"></section>
+        <!-- -----------------------------------------------Header end------------------------------------------------------------ -->
+
+        <!-- -----------------------------------------------Body start------------------------------------------------------------ -->
+
+    <session class="page body">
+        <div class="container">
+            <div class="left-side">
+                <div class="profile-img">
+                    <img src="IMG/signupView.jpg">
+                </div>
+            </div>
+            <div class="right-side">
+                <form action="php/signUp.php" method="POST" >
+                    <h1>Sign Up</h1>
+                    <div class="input-fields">
+                        <input type="text"  name="username" class="text" placeholder="Username">
+                        <input type="email"  name="email" class="text" placeholder="Email">
+                        <input type="password"  name="password" class="text" placeholder="Password">
+                        <input type="password"  name="re_pw" class="text" placeholder="Re-type Password">
+                    </div>
+                    <input type="submit" name="signUp"class="submit" value="Sign Up">
+                    <h5>Already have an account? <a href="login.html">Log in</a></h5>
+                    <div id="errormsg"></div>
+                </form>      
+            </div>
+            <div class="clear"></div>
+        </div>
+
+    </session>
+
+    <!-- -----------------------------------------------Body end------------------------------------------------------------ -->
+
+    <!-- ----------------------------------------------------------Footer Start----------------------------------- -->
+    <footer id="footer"></footer>
+    <!-- ----------------------------------------------------------Footer end----------------------------------- -->
+
+</body>
+</html>

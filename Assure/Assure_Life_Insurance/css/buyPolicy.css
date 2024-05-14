@@ -1,0 +1,222 @@
+ form{
+    background: #eee;
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+  fieldset{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    margin:auto;
+    margin-top: 80px;
+    margin-bottom: 180px;
+    width:800px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    border: none;
+  }
+  .header1{
+    margin-bottom: 50px;
+    text-align: center;
+    border:none;
+    background-color: #057c33;
+    padding: 5px;
+    color: white;
+  }
+  
+  .tab p{
+    font-size: 20px;
+    margin: 0 0 10px 0;
+  }
+  
+  input[type=text],input[type=email],input[type=number],input[type=date],textarea,select{
+    margin:  0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: 1px solid #24884ade;
+    border-radius: 7px;
+    height: 35px;
+    padding-left: 10px;
+  }
+
+  input::after{
+    border-color: #038857;
+  }
+  
+  .index-btn-wrapper{
+    display: flex;
+  }
+  
+  .index-btn{
+    margin-left: 160px;
+    width:100px;
+    margin-bottom: 30px;
+    background: #04AA6D;
+    color: #ffffff;
+    border: none;
+    padding: 5px 20px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    border-radius: 7px;
+  }
+  .cancel{
+    margin-left: 160px;
+    width:140px;
+    margin-bottom: 30px;
+    background: red;
+    color: #ffffff;
+    border: none;
+    padding: 5px 20px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    border-radius: 7px;
+  }
+  
+  .index-btn:hover{
+    background-color: #038857;
+  }
+  
+  .step{
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    margin: 0 20px 90px;
+    color: white;
+    background: lightgreen;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  legend{
+    margin:auto;
+    color:white;
+    background-color: #057c33;
+    font-weight: 500;
+    font-size: 30px;
+    text-align:center;
+    padding-top: 15px;
+    margin-bottom: 60px;
+    width: 400px;
+    border: none;
+    height: 60px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  }
+  
+  .cancel:hover{
+    background-color: rgb(201, 1, 1);
+  }
+ 
+  input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  #tab-1 .column1, #tab-1 input[type=text],#tab-1 input[type=email],#tab-1 input[type=number],#tab-1 input[type=date]{
+    margin-left: 5%;
+  }
+  .fullName{
+    width: 90%;
+  }
+  .iniName{
+    width:75%;
+  }
+  .email{
+    margin-left: 20%;
+    width:55%;
+  }
+  .dateL{
+    margin-left: 29%;
+  }
+  .maritalL{
+    margin-left: 24.5%;
+  }
+  .date{
+    margin-left: 40%;
+  }
+  .iniNameL{
+    margin-left: 4.5%;
+  }
+  .emailL{
+    margin-left: 26%;
+  }
+  .workL{
+    margin-left: 20%;
+  }
+  .address{
+    margin-left: 5%;
+    width:90%;
+    height:20%;
+  }
+  .work{
+    width:55%;
+  }
+  .gender{
+    margin-left: 5%;
+  }
+  .marital{
+    margin-left: 11%;
+  }
+  .title{
+    margin-left: 5%;
+  }
+
+  /*Beneficiary css*/
+  #tab-2 .column1, #tab-2 input[type=text],#tab-2 input[type=email],#tab-2 input[type=number],#tab-2 input[type=date]{
+    margin-left: 5%;
+  }
+  .relation{
+    width: 90%;
+  }
+
+  /*Medical css*/
+  #tab-3 label{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  #tab-3 input[type=radio]{
+    margin-left: 15%;
+  }
+  .mq1, .mq2, .mq3, .mq4, .mq5, .mq6, .mq7, .mq8, .mq9, .mq10{
+    text-align: justify;
+    display: block;
+  }
+
+  /*Additional css*/
+  .aq1L, .aq2L, .aq3L, .aq4L, .aq5L, .aq6L{
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+    display: block;
+  }
+  #tab-4 input[type=radio]{
+    margin-left: 15%;
+  }
+  .heightL, .weightL{
+    margin-left: 10%;
+  }
+  #tab-4 .height , #tab-4 .weight{
+    margin-left: 10%;
+  }
+
+  /*Bank Details*/
+  #tab-5 label, #tab-5 input[type=text],#tab-5 input[type=number]{
+    margin-left: 5%;
+    width:90%;
+  }
+
+  /*Declaration*/
+  .declaration{
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+  }
+  .acceptL{
+    margin-left: 35%;
+    padding: 5%;
+ }
+ .submit1{
+    width:150px;
+ }
+ 

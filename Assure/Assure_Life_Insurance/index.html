@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/header2.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/footer1.css">
+
+        <title>Assure Life Insurance</title>
+    </head>
+    <body>
+        <!------------------------- Header ----------------------------------->
+        <script src="js/header.js" onload="includeHeader();includeFooter(1);"></script>
+        <section class="header" id="header"></section>
+
+
+        <!---------------Hero image slider -------------------->
+        <div class="hero_section">
+            <div class="slider_tabs">
+                <input type="radio" name="slider" id="slider1" checked>
+                <input type="radio" name="slider" id="slider2">
+                <input type="radio" name="slider" id="slider3">
+
+                <div class="labels">
+                    <label for="slider1"></label>
+                    <label for="slider2"></label>
+                    <label for="slider3"></label>
+                </div>
+                <div class="hero_content">
+                    <div class="hero_box slider1_bg">
+                        <div class="content">
+                            <div class="heading_1">Assure Your Legacy with Comprehensive Life Insurance</div>
+                        </div>
+                    </div>
+                    <div class="hero_box slider2_bg">
+                        <div class="content">
+                            <div class="heading_2">Protect your retirement dreams with the right life insurance coverage</div>
+                        </div>
+                    </div>
+                    <div class="hero_box slider3_bg">
+                        <div class="content">
+                            <div class="heading_3">Safeguard your child's education, ensuring a secure and promising future.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------------------------------Why Choose Us?------------------------------------->
+        <div class="why-choose">
+            <div class="left-side">
+                <img src="IMG/Why choose.jpg" alt="why" />
+            </div>
+            <div class="right-side">
+                <h1>Why Choose Us?</h1>
+                <p>Looking for a reliable life insurance provider? Look no further than Assure Life Insurance. With a strong reputation for trustworthiness and exceptional service, we offer comprehensive coverage tailored to your specific needs. Our experienced team is here to guide you through the process, ensuring you make informed decisions.</p>
+                <a href="aboutUs.html" class="read-more">Read More</a>
+            </div>
+        </div>
+        <!---------------------------------Why Choose Us? end------------------------------------->
+
+        <!---------------------------------Products cards------------------------------------->
+        <section class="products-section">
+            <h1 class="section-heading">Our Products</h1>
+            <p class="section-paragraph">Discover a range of comprehensive insurance products tailored to your needs, offering reliable coverage and <br>financial peace of mind for every stage of life.</p>
+            
+            <div class="product-cards">
+          
+              <div class="product-card">
+                <img src="IMG/protection-card.jpg" alt="Product 1" class="product-image">
+                <h2 class="card-heading">Protection</h2>
+                <div class="card-overlay">
+                  <div class="product-logo">
+                    <img src="IMG/protection-clogo.png" alt="protection">
+                    <h3>Protection</h3>
+                  </div>
+                  <p>Protect what matters most with our life insurance protection plans, providing a shield of security and peace of mind for you and your loved ones</p>
+                </div>
+              </div>
+          
+              <div class="product-card">
+                <img src="IMG/children-card.jpg" alt="Product 2" class="product-image">
+                <h2 class="card-heading">Children</h2>
+                <div class="card-overlay">
+                  <div class="product-logo">
+                    <img src="IMG/children-clogo.png" alt="protection">
+                    <h3>Children</h3>
+                  </div>
+                  <p>Invest in your child's future with our specialized insurance plans, designed to provide financial security and support their dreams</p>
+                </div>
+              </div>
+              <div class="product-card">
+                <img src="IMG/retirement-card.jpg" alt="Product 3" class="product-image">
+                <h2 class="card-heading">Retirement<br>Plans</h2>
+                <div class="card-overlay">
+                  <div class="product-logo">
+                    <img src="IMG/retirement-clogo.png" alt="protection">
+                    <h3>Retirement Plans</h3>
+                  </div>
+                  <p>Retire with financial confidence through our insurance retirement plans, ensuring a fulfilling and worry-free future</p>
+                </div>
+              </div>
+              <div class="product-card">
+                <img src="IMG/Savings-card.jpg" alt="Product 4" class="product-image">
+                <h2 class="card-heading">Savings</h2>
+                <div class="card-overlay">
+                  <div class="product-logo">
+                    <img src="IMG/savings-clogo.png" alt="protection">
+                    <h3>Savings</h3>
+                  </div>
+                  <p>Secure your future with our life insurance saving plans, combining protection and savings for a brighter tomorrow</p>
+                </div>
+              </div>
+            </div>
+            <a href="ourProduct.html" class="read-more-products">Read More</a>
+          </section>
+        <!----------------------------------Our products end------------------------------------>
+
+        <!----------------------------------news and events------------------------------------>
+        <section class="news-events-section">
+            <h2 class="section-heading">News and Events</h2>
+            <p class="section-description">Stay updated with our latest news and events.</p>
+
+            <div class="news-events-slider">
+                <div class="slides" id="news-tag"></div>
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            </div>
+        </section>
+        <script src="js/index.js" onload="loadNews();"></script>
+
+        <!----------------------------------news and events end------------------------------------>
+        
+        <!----------------------------------footer------------------------------------>
+        <footer id="footer"></footer>
+
+
+    </body>
+</html>

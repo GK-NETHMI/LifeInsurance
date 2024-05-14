@@ -1,0 +1,113 @@
+
+.section-login{
+    background-image: url("../IMG/login-back.jpg");
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+.form-box{
+
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background: rgb(210, 255, 211);
+    opacity: 0.9;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40%;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    transition: 0.3s ease;
+}
+.form-box:hover{
+    opacity: 1;
+}
+h2{
+
+    font-size: 2em;
+    color: rgb(36, 99, 55);
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 50px;
+    opacity: 1;
+}
+.inputbox{
+
+    position: relative;
+    margin: 30px 0px;
+    border-bottom: 2px solid rgb(41, 41, 41);
+    opacity: 1;
+}
+.inputbox label{
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(78, 78, 78);
+    font-size: 1em;
+    pointer-events: none;
+    top: -5px;
+}
+
+.inputbox input{
+
+    width: 100%;
+    height: 50px;
+    background:transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #2c2c2c;
+}
+
+.forget a{
+
+    margin: -15px 0 15px;
+    font-size: 15px;
+    color: #424242;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 5%;
+    transition: .3s ease;
+}
+
+.forget a:hover{
+    color: rgb(36, 99, 55);
+}
+.forget label input{
+    margin-right: 3px;
+}
+.forget label a:hover{
+
+    text-decoration: underline;
+}
+.button-1{
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    padding: 6px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(26, 110, 26, 0.89);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.button-1:hover{
+    background-color: rgba(18, 73, 18, 0.89);
+}
+.register p{
+    margin-top: 5%;
+    color: rgb(70, 70, 70);
+    font-size: 12px;
+    text-align: center;
+}

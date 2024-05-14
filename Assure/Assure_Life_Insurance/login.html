@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/footer2.css">
+        <title>Login</title>
+    </head>
+    <body>
+        <!-- -----------------------------------------------Header start------------------------------------------------------------ -->
+        <script src="js/header.js" onload="includeHeader();includeFooter(2);"></script>
+        <section class="header" id="header"></section>
+        <!-- -----------------------------------------------Header end------------------------------------------------------------ -->
+        <section class="section-login">
+            <div class="form-box">
+                <div class="form-value">
+
+                    <form action="php/login.php" name="login" method="POST">
+                        <h2>Login</h2>
+                        <div class="inputbox">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                            <input type="text" name="uid">
+                            <label>User Name</label>
+                        </div>
+
+                        <div class="inputbox">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                            <input type="password" name="pwd">
+                            <label>Password</label>
+                        </div>
+                        <div class="forget">
+                            <a href="forgotPassword.html">Forget Password</a>
+                        </div>
+                        <input type="submit" name="login" class="button-1" value="login">
+
+                    </form>
+
+                </div>
+
+
+            </div>
+
+
+
+        </section>
+
+        <!-- ----------------------------------------------------------Footer Start----------------------------------- -->
+        <footer id="footer"></footer>
+        <!-- ----------------------------------------------------------Footer end----------------------------------- -->  
+
+    </body>
+</html>

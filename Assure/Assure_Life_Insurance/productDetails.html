@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/productDetails.css">
+        <link rel="stylesheet" href="css/footer1.css">
+
+        <title>View Product</title>
+    </head>
+    <body onload="productload();">
+        <script src="js/header.js" onload="includeHeader();includeFooter(1);"></script>
+        <section class="header" id="header"></section>
+        <!-- -----------------------------------------------Header end------------------------------------------------------------ -->
+        <div id="background" class="product-details" >
+            <div class="product-details-content">
+                <h1 id="topic"></h1><br>
+                <div  class="content">
+                    <h4 id="introduction"></h4>
+                    <ul id="description" ></ul><br>
+                    <input type="button" class="index-btn" onclick="window.location = 'buyPolicy.html'; " value="Buy Policy">
+                </div>
+            </div>
+        </div>
+        <!--------------------------------footer------------------------------>
+        <footer id="footer"></footer>
+        <script  src="js/productDetails.js"></script>
+    </body>
+</html>

@@ -1,0 +1,373 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  overflow-x: hidden;
+}
+
+.hero_section{
+  background-color: #fff;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 200px;
+}
+
+.slider_tabs input{
+  visibility: hidden;
+  display: none;
+}
+.labels{
+  display: flex;
+  gap: 30px;
+  position:absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.labels label{
+  height: 15px;
+  width: 15px;
+  background-color: rgb(202, 200, 200);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.slider_tabs input:nth-child(1):checked ~ .labels label:nth-child(1),
+.slider_tabs input:nth-child(2):checked ~ .labels label:nth-child(2),
+.slider_tabs input:nth-child(3):checked ~ .labels label:nth-child(3){
+  width: 20px;
+  background: rgb(255, 255, 255);
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero_content{
+  display: flex;
+  width: 300vw;
+  position: relative;
+  transition: all .5s linear;
+}
+
+.hero_content .hero_box{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero_content .hero_box:nth-child(1){
+  background-image: url("../IMG/heroImage1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+ 
+}
+.hero_content .hero_box:nth-child(2){
+  background-image: url("../IMG/heroImage2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.hero_content .hero_box:nth-child(3){
+  background-image: url("../IMG/heroImage3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+}
+
+.slider_tabs input:nth-child(1):checked ~ .hero_content{
+left: 0vw;
+}
+.slider_tabs input:nth-child(2):checked ~ .hero_content{
+left: -100vw;
+}
+.slider_tabs input:nth-child(3):checked ~ .hero_content{
+left: -200vw;
+}
+.heading_1{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 325;
+  font-size: 50px;
+  text-align: right;
+  margin-left: 50%;
+  margin-right: 30px;
+  letter-spacing: 2px;
+  margin-top: -70px;
+  padding: 10px;
+  color: white;
+}
+.heading_2{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 325;
+  font-size: 50px;
+  text-align: left;
+  margin-right: 50%;
+  margin-left: 30px;
+  letter-spacing: 2px;
+  margin-top: 300px;
+  padding: 10px;
+  color: white;
+}
+.heading_3{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 325;
+  font-size: 50px;
+  text-align: right;
+  margin-left: 40%;
+  margin-right: 30px;
+  letter-spacing: 2px;
+  margin-top: 200px;
+  padding: 10px;
+  color: white;
+}
+
+/*---------------------------------Why Choose Us?-------------------------------------*/
+.why-choose {
+  display: flex;
+  margin-bottom: 100px;
+  margin-top: -40px;
+}
+
+.why-choose .left-side {
+  flex: 1;
+  padding: 0;
+  margin-left: 20px;
+  width: 40px; 
+}
+
+.why-choose .left-side img {
+  height: auto;  
+  width: 400px;
+  margin-left: 100px;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.why-choose .right-side {
+  flex: 1;
+  padding: 20px;
+  margin-left: 50px;
+  margin-right: 40px;
+}
+
+.why-choose h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.why-choose p {
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 20px;
+  margin-right: 50px;
+  text-align: justify;
+}
+
+.why-choose .read-more {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.why-choose .read-more:hover{
+  background-color: #268b45;
+  color: white;
+  border-color: #268b45;  
+}
+/*---------------------------------Why Choose Us? end-------------------------------------*/
+
+/*---------------------------------Our Products-------------------------------------*/
+.products-section {
+  text-align: center;
+  background-color: rgb(225, 255, 227);
+}
+
+.section-heading {
+  font-size: 40px;
+  font-weight: bold;
+  padding-top: 50px;
+}
+
+.section-paragraph {
+  font-size: 16px;
+  margin-bottom: 35px;
+}
+
+.product-cards {
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap; 
+  gap: 50px;
+}
+
+.product-card {
+  height: auto;
+  background-color: white;
+  width: 200px;
+  height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+  box-shadow: 5px 5px 20px;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-heading {
+  color: #fff;
+  position: absolute;
+  font-size: 23px;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  transition: 0.5s ease;
+}
+
+.product-card:hover .card-heading{
+  opacity: 0;
+}
+
+.card-overlay{
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+  color: #ffffff;
+}
+.product-card:hover .card-overlay{
+  height: 100%;
+}
+
+.product-logo{
+  margin-top: 20px;
+  display: flex;
+  text-align: left;
+}
+.product-logo img{
+  width: 45px;
+  margin-left: 10px;
+  height: auto;
+}
+.product-logo h3{
+  margin-left: 10px;
+  display: flex;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.card-overlay p{
+  font-weight: 330;
+  margin-top: 10px;
+  padding: 15px;
+  text-align: left;
+}
+.read-more-products {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(233, 255, 237);
+  color: #000000;
+  text-decoration: none;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  margin-bottom: 50px;
+}
+.read-more-products:hover{
+  background-color: #268b45;
+  color: white;
+  border-color: #268b45;  
+}
+
+/*---------------------------------Our Products End-------------------------------------*/
+
+/*---------------------------------News and events-------------------------------------*/
+
+.news-events-section {
+  text-align: center;
+  justify-content: center;
+}
+
+.news-events-section .section-heading {
+  font-size: 40px;
+  font-weight: bold;
+  padding-top: 30px;
+}
+
+.news-events-section .section-description {
+  font-size: 16px;
+  margin-bottom: 35px;
+}
+
+.news-events-slider {
+  position: relative;
+  width: 60%;
+  height: 400px;
+  overflow: hidden;
+  left: 20%;
+  margin-bottom: 50px;
+}
+
+.news-events-slider .slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.news-events-slider .slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+}
+.news-events-slider .slides img.active {
+  opacity: 1;
+}
+
+.news-events-slider .prev,
+.news-events-slider .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.news-events-slider .prev {
+  left: 10px;
+}
+
+.news-events-slider .next {
+  right: 10px;
+}
+
+

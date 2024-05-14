@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Buy Policy</title>
+        <link rel="stylesheet" href="css/buyPolicy.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/header2.css">
+        <link rel="stylesheet" href="css/footer2.css">
+        <!--In here we used jquery library to make the form a multi step form-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body onload="checkPolicy();">
+        <!-- -----------------------------------------------Header Start------------------------------------------------------------ -->
+        <script src="js/header.js" onload="includeHeader();includeFooter(2);"></script>
+        <section class="header" id="header"></section>
+        <!-- -----------------------------------------------Header end------------------------------------------------------------ -->
+        <form id="myForm" action="php/buyPolicy.php" method="post" autocomplete = "off">
+            <fieldset>
+                <legend>Policy Form</legend>
+                <hr style="height:2px; width:400px; margin:auto; background-color: green; border:none; margin-bottom:-17px;">
+                <div style="text-align:center;">
+                    <span class="step" id = "step-1">1</span>
+                    <span class="step" id = "step-2">2</span>
+                    <span class="step" id = "step-3">3</span>
+                    <span class="step" id = "step-4">4</span>
+                    <span class="step" id = "step-5">5</span>
+                    <span class="step" id = "step-6">6</span>
+                </div>
+                <!-- -----------------------------------------------Personal Details------------------------------------------------------------ -->
+                <div class="tab" id = "tab-1">
+                    <h2 class="header1">Personal Details</h2>
+
+                    <label class="column1">Policy Name :</label>
+                    <select name="policyID" class="policyName" id="policy_name">
+                        <option disabled selected hidden>Select</option>
+                    </select><br><br>
+
+                    <label class="column1">Duration :</label>
+                    <select name="duration" class="duration">
+                        <option disabled selected hidden>Select</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="100">Lifetime</option>
+                    </select><br><br>
+
+                    <label class="column1">Full Name :</label><br>
+                    <input type="text" class="fullName" name="fullName"><br><br>
+
+                    <label class="column1">Mrs/Mr :</label>
+                    <label class="iniNameL">Name with initials :</label><br>
+
+                    <select name="title" class="title">
+                        <option disabled selected hidden>Select</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Mr">Mr</option>
+                    </select>
+
+                    <input type="text" class="iniName" name="iniName"><br><br>
+
+                    <label class="column1">NIC :</label>
+                    <label class="dateL">Date of birth :</label><br>
+
+                    <input type="text" class="nic" name="nic">
+                    <input type="date" class="dateI" name="date"><br><br>
+
+                    <label class="column1">Gender :</label>
+                    <label class="maritalL">Marital status :</label><br>
+
+                    <input type="radio" name="gender" value="male" class="gender"><label class="maleLabel">Male</label>
+                    <input type="radio" name="gender" value="female" class="gender"><label class="femaleLabel">Female</label>
+
+                    <select class="marital" name="marital">
+                        <option disabled selected hidden>Select</option>
+                        <option value="Married">Married</option>
+                        <option value="Single">Single</option>
+                    </select><br><br>
+
+                    <label class="column1">Address :</label><br>
+                    <textarea class="address" name="address" > </textarea><br><br>
+
+                    <label class="column1">Mobile :</label>
+                    <label class="emailL">Email :</label><br>
+
+                    <input type="number" class="mobile" name="mobile" >
+                    <input type="email" class="email" name="email" ><br><br>
+
+                    <label class="column1">Occupation :</label>
+                    <label class="workL">Work company :</label><br>
+
+                    <input type="text" class="occupation" name="occupation">
+                    <input type="text" class="work" name="work"><br><br><br>
+
+                    <div class="index-btn-wrapper">
+                        <button class="cancel">Cancel</button>
+                        <div class="index-btn" onclick="run(1, 2);">Next</div>
+                    </div>
+                </div>
+                <!-- -----------------------------------------------Beneficiary and family details------------------------------------------------------------ -->
+                <div class="tab" id = "tab-2">
+                    <h2 class="header1">Beneficiary and family details</h2>
+
+                    <label class="column1">Full Name :</label><br>
+                    <input type="text" class="fullName" name="bfullName"><br><br>
+
+                    <label class="column1">Mrs/Mr :</label>
+                    <label class="iniNameL">Name with initials :</label><br>
+
+                    <select name="btitle" class="title">
+                        <option disabled selected hidden>Select</option>
+                        <option>Mrs</option>
+                        <option>Mr</option>
+                    </select>
+
+                    <input type="text" class="iniName" name="biniName"><br><br>
+                    <label class="column1">NIC :</label>
+                    <label class="dateL">Date of birth :</label><br>
+
+                    <input type="text" class="nic" name="bnic">
+                    <input type="date" class="date" name="bdate"><br><br>
+
+                    <label class="column1">Gender :</label>
+                    <label class="maritalL">Marital status :</label><br>
+
+                    <input type="radio" name="bgender" value="male" class="gender"><label class="maleLabel">Male</label>
+                    <input type="radio" name="bgender" value="female" class="gender"><label class="femaleLabel">Female</label>
+
+                    <select class="marital" name="bmarital">
+                        <option disabled selected hidden>Select</option>
+                        <option>Married</option>
+                        <option>Single</option>
+                    </select><br><br>
+
+                    <label class="column1">Address :</label><br>
+                    <textarea class="address" name="baddress" > </textarea><br><br>
+
+                    <label class="column1">Mobile :</label>
+                    <label class="emailL">Email :</label><br>
+
+                    <input type="number" class="mobile" name="bmobile" >
+                    <input type="email" class="email" name="bemail" ><br><br>
+
+                    <label class="column1">Relationship with policyholder :</label><br>
+                    <input type="text" class="relation" name="brelation"><br><br><br>
+
+                    <div class="index-btn-wrapper">
+                        <div class="index-btn" onclick="run(2, 1);">Previous</div>
+                        <div class="index-btn" onclick="run(2, 3);">Next</div>
+                    </div>
+                </div>
+                <!-- -----------------------------------------------Medical History------------------------------------------------------------ -->
+                <div class="tab" id = "tab-3">
+                    <h2 class="header1">Medical History</h2>
+
+                    <label class="mq1">1. Have you visited a doctor in the last 3 year? </label>
+                    <input type="radio" name="mq1" value="1">Yes
+                    <input type="radio" name="mq1" value="0">No<br><br>
+
+                    <label class="mq2">2. Have you ever been subject to any medical condition, illness or injury  which has already affected your/ child’s health or any do so in the future?</label>
+                    <input type="radio" name="mq2" value="1">Yes
+                    <input type="radio" name="mq2" value="0">No<br><br>
+
+                    <label class="mq3">3. Have you ever undergone or been advised to under go an operation, X-ray, medical check-up or investigation at a hospital or elsewhere?</label>
+                    <input type="radio" name="mq3" value="1">Yes
+                    <input type="radio" name="mq3" value="0">No<br><br>
+
+                    <label class="mq4">4. Have you ever had an illness, accident or injury requiring an overnight stay in hospital?</label>
+                    <input type="radio" name="mq4" value="1">Yes
+                    <input type="radio" name="mq4" value="0">No<br><br>
+
+                    <label class="mq5">5. Are you at present receiving medical treatment or taking any medicine or drugs, or have knowledge of any impending medical or surgical tests or treatment?</label>
+                    <input type="radio" name="mq5" value="1">Yes
+                    <input type="radio" name="mq5" value="0">No<br><br>
+
+                    <label class="mq6">6. Have you or your dependents ever been in a state of anxiety, depression or had any mental, nervous, neurological disorder? </label>
+                    <input type="radio" name="mq6" value="1">Yes
+                    <input type="radio" name="mq6" value="0">No<br><br>
+
+                    <label class="mq7">7. Have you ever been physically disable in any manner or had any defect due to injury or disease? If so give details.</label>
+                    <input type="radio" name="mq7" value="1">Yes
+                    <input type="radio" name="mq7" value="0">No<br><br>
+
+                    <label class="mq8">8. Do you have any physical disability, deformity or impairment? </label>
+                    <input type="radio" name="mq8" value="1">Yes
+                    <input type="radio" name="mq8" value="0">No<br><br>
+
+                    <label class="mq9">9. Have you remained absent from work on grounds of ill health during the last three years for more than three consecutive days? </label>
+                    <input type="radio" name="mq9" value="1">Yes
+                    <input type="radio" name="mq9" value="0">No<br><br>
+
+                    <label class="mq10">10. Have you ever suffered from any illness or disorder. </label>
+                    <input type="radio" name="mq10" value="1">Yes
+                    <input type="radio" name="mq10" value="0">No<br><br>
+
+                    <div class="index-btn-wrapper">
+                        <div class="index-btn" onclick="run(3, 2);">Previous</div>
+                        <div class="index-btn" onclick="run(3, 4);">Next</div>
+                    </div>
+                </div>
+                <!-- -----------------------------------------------Additional History------------------------------------------------------------ -->
+                <div class="tab" id = "tab-4">
+                    <h2 class="header1">Additional Details</h2>
+
+                    <label class="heightL">Height (Cm) :</label><br>
+                    <input type="number" class="height" name="height"><br><br>
+
+                    <label class="weightL">Weight (Kg) :</label><br>
+                    <input type="number" class="weight" name="weight"><br><br>
+
+                    <label class="aq1L">1. Do you smoke?</label>
+                    <input type="radio" name="aq1" value="1">Yes
+                    <input type="radio" name="aq1" value="0">No<br><br>
+
+                    <label class="aq2L">2. Do you consume Alcohol?</label>
+                    <input type="radio" name="aq2" value="1">Yes
+                    <input type="radio" name="aq2" value="0">No<br><br>
+
+                    <label class="aq3L">3. Do you have any intention of engaging in any hazardous occupation?</label>
+                    <input type="radio" name="aq3" value="1">Yes
+                    <input type="radio" name="aq3" value="0">No<br><br>
+
+                    <label class="aq4L">4. Do you engage or intended to engage in any hazardous sport such as hunting, motor racing, motor cycle racing, skiing, deep sea diving?</label>
+                    <input type="radio" name="aq4" value="1">Yes
+                    <input type="radio" name="aq4" value="0">No<br><br>
+
+                    <label class="aq5L">5. Have you ever been arrested for or convicted of any criminal offense?</label>
+                    <input type="radio" name="aq5" value="1">Yes
+                    <input type="radio" name="aq5" value="0">No<br><br>
+
+                    <label class="aq6L">6. Do you or any member of your family have or ever had any kind of threat on your life/ their lives?</label>
+                    <input type="radio" name="aq6" value="1">Yes
+                    <input type="radio" name="aq6" value="0">No<br><br>
+
+                    <div class="index-btn-wrapper">
+                        <div class="index-btn" onclick="run(4, 3);">Previous</div>
+                        <div class="index-btn" onclick="run(4, 5);">Next</div>
+                    </div>
+                </div>
+                <!-- -----------------------------------------------Bank Details------------------------------------------------------------ -->
+                <div class="tab" id = "tab-5">
+                    <h2 class="header1">Bank Details</h2>
+
+                    <label class="bankNameL">Bank name :</label><br>
+                    <input type="text" class="bankName" name="bankName"><br><br>
+
+                    <label class="branchNameL">Branch name :</label><br>
+                    <input type="text" class="branchName" name="branchName"><br><br>
+
+                    <label class="accountNoL">Account number :</label><br>
+                    <input type="number" class="accountNo"  name="accountNo"><br><br>
+
+                    <label class="accountNameL">Account name :</label><br>
+                    <input type="text" class="accountName" name="accountName"><br><br>
+
+                    <div class="index-btn-wrapper">
+                        <div class="index-btn" onclick="run(5, 4);">Previous</div>
+                        <div class="index-btn" onclick="run(5, 6);">Next</div>
+                    </div>
+                </div>
+                <!-- -----------------------------------------------Declaration------------------------------------------------------------ -->
+                <div class="tab" id = "tab-6">
+
+                    <h2 class="header1">Declaration</h2>
+                    <h3 class="declaration">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h3><br><br>
+                    <label class="acceptL">Agree</label><input type="checkbox" class="accept" id="check1" onclick="enable()"><br><br><br><br>
+
+                    <div class="index-btn-wrapper">
+                        <div class="index-btn l-previous" onclick="run(6, 5);">Previous</div>
+                        <button id="submit1" disabled="true" class = "index-btn submit1" type="submit" name="submit" style="background-color: rgb(214, 214, 214); color:grey;">Submit</button>
+                    </div>
+
+                </div>
+            </fieldset>
+        </form>
+
+        <!-- ----------------------------------------------------------Footer Start----------------------------------- -->
+        <footer id="footer"></footer>
+        <!-- ----------------------------------------------------------Footer end----------------------------------- -->  
+
+        <script src="js/buyPolicy.js"></script>
+
+    </body>
+</html>

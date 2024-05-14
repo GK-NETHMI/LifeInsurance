@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/header2.css">
+        <link rel="stylesheet" type="text/css" href="css/footer2.css">
+        <link rel="stylesheet" type="text/css" href="css/customerProfile.css">
+        <title>Profile</title>
+    </head>
+    <body onload="checkUser();">
+        <!-- -----------------------------------------------Header Start------------------------------------------------------------ -->
+        <script src="js/header.js" onload="includeHeader();includeFooter(2);"></script>
+        <section class="header" id="header"></section>
+        <!-- ---------------------------------------------------------Header end----------------------------------------- -->
+
+        <!-- ---------------------------------------------------------Button Set Start----------------------------------- -->
+        <div class="btn-set">
+            <input type="button" value="View Profile" class="pro-btn" id="btn1" onclick="view(1);">
+            <input type="button" value="View Policies" class="pro-btn" id="btn2" onclick="view(2);">
+            <input type="button" value="Pay Premium" class="pro-btn" id="btn3" onclick="view(3);">
+            <input type="button" value="Request Claim" class="pro-btn" id="btn4" onclick="view(4);">
+            <input type="button" value="Send Enquiry" class="pro-btn" id="btn5" onclick="view(5);">
+            <!--<input type="button" value="Notification" class="pro-btn" id="btn6" onclick="view(6);">-->
+            <input type="button" value="Your Feedback" class="pro-btn" id="btn7" onclick="view(7);">
+        </div>
+        <!-- ----------------------------------------------------------Button Set end----------------------------------- -->
+
+        <!-- ----------------------------------------------------------View Info Section Start----------------------------------- -->
+        <div class="proDivCommon" id="view-info">
+            <form class="form" enctype="multipart/form-data" method="POST" action="php/customerProfile/editInfo.php">
+
+                <div class="view-left">
+                    <label>Full Name </label>
+                    <input type="text" class="view-text unUsable" id="name" readonly>
+
+                    <label>NIC </label>
+                    <input type="text" class="view-text unUsable" id="nic" readonly>
+
+                    <label>Gender </label>
+                    <input type="text" class="view-text unUsable" id="gender" readonly>
+
+                    <label>Date Of Birth </label>
+                    <input type="text" class="view-text unUsable" id="dob" readonly>
+
+                    <label>Marital Status </label>
+                    <input type="text" class="view-text" id="ms" name="ms">
+
+                    <label>Address </label>
+                    <input type="text" class="view-text" id="address" name="address">
+
+                    <label>Mobile </label>
+                    <input type="text" class="view-text" id="mobile" name="mobile">
+
+                    <label>Email </label>
+                    <input type="text" class="view-text" id="email" name="email">
+
+                    <label>Occupation </label>
+                    <input type="text" class="view-text" id="occupation" name="occupation">
+
+                    <label>Work Place </label>
+                    <input type="text" class="view-text" id="wPlace" name="work">
+                    <input type="submit" value="Edit" class="sub-btn" id="edit-btn" onclick="return validateInfo();">
+                </div>
+
+                <div class="view-right">
+                    <label class="img-label">
+                        <img class="img-tag" id="dp">
+                    </label>
+                    <input type="file" class="img-select" name="img" id="img" onchange="changePic();">
+                </div>
+            </form>
+        </div>
+        <!-- ----------------------------------------------------------View Info Section end----------------------------------- -->
+
+        <!-- ----------------------------------------------------------View policy Section Start----------------------------------- -->
+        <div class="proDivCommon" id="view-policy" hidden>
+            <div class="policy-container" id="policy-container">
+
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------View Policy Section end----------------------------------- -->
+
+        <!-- ----------------------------------------------------------Pay Premium Section Start----------------------------------- -->
+
+        <div class="proDivCommon" id="pay-premium" hidden>
+
+            <form class="form" enctype="multipart/form-data" method="POST" action="php/customerProfile/payPremium.php">
+
+
+                <div class="premium-middle">
+
+                    <label>Premium Id </label>
+                    <input type="text" class="view-text unUsable" id="premium-id" name="premium-id" readonly>
+
+                    <label>Policy </label>
+                    <select id="act-policy-name-premium" name="act-policy-name" class="view-text policy-selector" onchange="policySelected();">
+                        <option value="0">--Select Policy--</option>
+                    </select><br>
+
+                    <label>Month </label>
+                    <select name="month" class="view-text">
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select><br>
+
+                    <label>Amount</label>
+                    <input type="text" class="view-text unUsable" id="amount" name="amount" readonly>
+
+                </div>
+
+                <div class="view-left premium-left">
+                    <div class="premium-type">Online Payment</div>
+
+                    <label>Card Number </label>
+                    <input type="text" class="view-text" id="card-no" name="card-no">
+
+
+                    <label>Name On Card </label>
+                    <input type="text" class="view-text" id="card-name" name="card-name">
+                    <div>
+                        <div class="view-left">
+                            <label>CVC</label>
+                            <input type="text" class="view-text small-txt" id="cvc" name="cvc">
+                        </div>
+                        <div view-right>
+                            <label>Expiry</label>
+                            <input type="text" class="view-text small-txt" id="expiry" name="expiry">
+                        </div>
+                    </div>
+                    <input type="submit" value="Proceed" class="sub-btn" name="online" onclick="return validatePremium(1);">
+
+                </div>
+
+                <div class="view-right premium-right">
+                    <label class="premium-type">Bank Deposit</label>
+                    <div class="premium-bank-div">
+                        <input type="file" name="slip" class="slip-upload" accept="image/*" id="bank-slip">
+                    </div>
+                    <input type="submit" value="Submit" class="sub-btn" name="deposit" onclick="return validatePremium(2);">
+                </div>
+
+            </form>
+
+        </div>
+
+        <!-- ----------------------------------------------------------Pay Premium Section end----------------------------------- -->
+
+        <!-- ----------------------------------------------------------Request Claim Section Start----------------------------------- -->
+
+        <div class="proDivCommon" id="request-claim" hidden>
+
+            <form class="form" enctype="multipart/form-data" method="POST" action="php/customerProfile/requestClaim.php">
+
+                <label>Claim Id </label>
+                <input type="text" class="view-text unUsable" id="claim-id" name="claim-id" readonly>
+
+                <label>Policy </label>
+                <select id="act-policy-name-claim" name="act-policy-name" class="view-text">
+                    <option value="0">--Select Policy--</option>
+                </select><br><br>
+
+                <label>Cause </label>
+                <input type="text" class="view-text" id="cause" name="cause">
+
+                <label>Date </label>
+                <input type="date" class="view-text" id="date" name="date">
+
+                <label>place </label>
+                <input type="text" class="view-text" id="place" name="place">
+
+                <label>Hospital </label>
+                <input type="text" class="view-text" id="hospital" name="hospital">
+
+                <label>Ward No </label>
+                <input type="text" class="view-text" id="ward" name="ward">
+
+                <label>Comment </label>
+                <input type="text" class="view-text" id="comment" name="comment">
+
+                <label>Proof Documents</label>
+                <input type="file" name="proof[]" class="proof-files" accept="image/*" id="proof-files" multiple>
+
+                <input type="submit" value="Request Claim" class="sub-btn" onclick="return validateClaim();">
+
+            </form>
+
+        </div>
+
+        <!-- ----------------------------------------------------------Request Claim Section end----------------------------------- -->
+
+        <!-- ----------------------------------------------------------Send Enquiry Section Start----------------------------------- -->
+
+        <div class="proDivCommon" id="send-enquiry" hidden>
+            <form class="form" method="POST" action="php/customerProfile/sendEnquiry.php">
+
+                <label>Enquiry ID </label>
+                <input type="text" class="view-text unUsable" id="enquiry-id" name="enquiry-id" readonly>
+
+                <label>Enquiry </label><br>
+                <textarea class="textarea" id="enquiry-text" name="enquiry-text"></textarea>
+                <br>
+                <input type="submit" value="Send Enquiry" class="sub-btn" onclick="return validateEnquiry();">
+
+            </form>
+        </div>
+
+        <!-- ----------------------------------------------------------Send Enquiry Section end----------------------------------- -->
+
+        <!-- ----------------------------------------------------------Notifications Section Start----------------------------------- -->
+
+        <div class="proDivCommon" id="notification" hidden>
+
+        </div>
+
+        <!-- ----------------------------------------------------------Notifications Section end----------------------------------- -->
+
+        <!-- ----------------------------------------------------------Your feedback Section Start----------------------------------- -->
+
+        <div class="proDivCommon" id="your-feedback" hidden>
+            <form class="form" method="POST" action="php/customerProfile/addFeedback.php">
+
+                <label>Feedback ID </label>
+                <input type="text" class="view-text unUsable" id="feedback-id" name="feedback-id" readonly>
+
+                <label>Feedback </label><br>
+                <textarea class="textarea" id="feedback-text" name="feedback-text"></textarea>
+                <br>
+                <input type="submit" value="Submit Feedback" class="sub-btn" onclick="return validateFeedback();">
+
+            </form>
+        </div>
+
+        <!-- ----------------------------------------------------------Your Feedback Section end----------------------------------- -->
+
+        <!-- ----------------------------------------------------------Footer Start----------------------------------- -->
+        <footer class="proFooter-custom" id="footer"></footer>
+        <!-- ----------------------------------------------------------Footer end----------------------------------- -->  
+        <script src="js/customerProfile.js"></script>
+    </body>
+</html>

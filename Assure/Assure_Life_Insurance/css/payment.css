@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.container {
+    background-image: linear-gradient(to top, rgb(207, 255, 239) , white);
+    height: 130vh;
+    overflow: hidden;
+}
+  
+.left-side {
+    float: left;
+    width: 50%;
+}
+  
+.right-side {
+    margin-top: -1000px;
+    float: right;
+    width: 50%;
+    display:grid;
+}
+.container h2{
+    text-align: center;
+}
+.amountLabel{
+    margin-left: 100px;
+}
+.amount{
+    margin-left: 20px;
+    height:35px;
+    border-radius: 7px;
+    width: 60%;
+}
+.cardNameL, .cardNumberL{
+    margin-left:100px;
+}
+.cardName, .cardNumber{
+    margin-left:100px;
+    width:78%;
+    height:35px;
+    border-radius: 7px;
+}
+.line{
+    background-color: black;
+    width:2px;
+    margin-left: 50%;
+    height:1000px;
+}
+.expiryL{
+    margin-left: 100px;
+}
+.cvvL{
+    margin-left: 300px;
+}
+.expiry{
+    height:35px;
+    margin-left: 100px;
+    width:20%;
+    border-radius: 7px;
+}
+.cvv{
+    height:35px;
+    margin-left: 200px;
+    width:10%;
+    border-radius:7px;
+}
+.proceed{
+    margin-left: 330px;
+    padding:5px 10px;
+    width:100px;
+    border-radius: 7px;
+    margin-top:155px;
+    transition: 0.3s ease;
+}
+.proceed:hover{
+    cursor: pointer;
+    background-color: rgb(8, 104, 8);
+    border: 1px solid rgb(8, 104, 8);
+    color:white;
+}
+.right-side h3{
+    margin-left: 100px;
+    margin-top: 40px;
+}
+.drop{
+    margin-left: 125px;
+    margin-top: 20px;
+    border: 2px dashed black;
+    width:500px;
+    height:350px;
+    background-color: rgb(255, 255, 255);
+}
+.amount2{
+    width:50%;
+    height:35px;
+    border-radius: 7px;
+    margin-top: -35px;
+    margin-left: 250px;
+}
+.select{
+    margin-left: 120px;
+    margin-top: 100px;
+    padding:5px 10px;
+    border-radius: 7px;
+}
+.drop h4{
+    margin-left: 140px;
+}
+.drop h5{
+    margin-top: 30px;
+    margin-left: 245px;
+}
+.limitL{
+    margin-left: 100px;
+}
+.supportL{
+    margin-left:400px;
+    margin-top:-30px;
+}
+.mb{
+    margin-left: 100px;
+    color:grey;
+}
+.pdf{
+    margin-left:400px;
+    margin-top:-30px;
+    color:grey;
+}
+.slipSubmit{
+    margin-top:20px;
+    width:100px;
+    margin-left: 335px;
+    border-radius: 7px;
+    height:35px;
+    transition: 0.3s ease;
+}
+.slipSubmit:hover{
+    cursor: pointer;
+    background-color: rgb(8, 104, 8);
+    border: 1px solid rgb(8, 104, 8);
+    color:white;
+}
+
+
+
+

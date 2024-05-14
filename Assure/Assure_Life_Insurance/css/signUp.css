@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.container {
+    background-image: linear-gradient(to top, rgb(207, 255, 239) , white);
+    height: 71.1vh;
+    overflow: hidden;
+}
+  
+.left-side {
+    float: left;
+    width: 50%;
+}
+  
+.right-side {
+    float: right;
+    width: 50%;
+    display:grid;
+}
+  
+.clear {
+    clear: both;
+}
+.profile-img img{
+    margin:50px 250px;
+    width:330px
+}
+.right-side h1{
+    margin-top:60px;
+    margin-bottom: 0px;
+}
+.input-fields{
+    display: flex;
+    flex-direction: column;
+}
+.text{
+    width:250px;
+    height: 35px;
+    margin:20px 0px 0px;
+    border-radius: 20px;
+    padding-left:50px;
+}
+.submit{
+    align-items: center;
+    width:305px;
+    height:40px;
+    margin-top: 27px;
+    background-color: black;
+    color:white;
+    border-radius: 7px;
+    border:none;
+    font-size: 18px;
+}
+.right-side h5{
+    margin-top:10px;
+    margin-left: 20px;
+}
+.submit:hover{
+    background-color: green;
+}
